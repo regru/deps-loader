@@ -1,6 +1,7 @@
 var flattenDeps = require('./lib/flatten-deps');
 var get = require('lodash.get');
 var loaderUtils = require('loader-utils');
+var normalize = require('deps-normalize');
 
 /**
  * query:
@@ -19,6 +20,8 @@ module.exports = function (content) {
     var bemdecl = typeof content === 'string'
         ? this.exec(content, this.resourcePath)
         : content; // assume that its a plain object / array
+
+    bemdecl = normalize(bemdecl);
 
     flattenDeps(bemdecl, levels, exts)
       .then(function (deps) {
