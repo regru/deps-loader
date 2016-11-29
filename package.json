@@ -21,7 +21,7 @@
   "homepage": "https://github.com/sullenor/deps-loader#readme",
   "dependencies": {
     "@bem/deps": "github:regru/bem-deps.git#0.1.1-regru",
-    "deps-normalize": "^2.4.1",
+    "deps-normalize": "github:regru/deps-normalize.git#2.5.0",
     "loader-utils": "^0.2.12",
     "lodash.get": "^3.7.0",
     "stream-to-array": "^2.2.0"
